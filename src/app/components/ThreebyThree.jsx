@@ -25,7 +25,7 @@ const ThreebyThree = () => {
             >
             <div className='relative group bg-red-600 ' key={item.id}>
                 <video key={item.id}
-                // autoPlay
+                autoPlay
                 loop
                 muted
                 className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-auto' >

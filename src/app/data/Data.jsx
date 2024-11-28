@@ -1,8 +1,8 @@
 export const Music = [
-    {id:1 , src:"https://youtube.com/embed/lWKd_mMjdgA?controls=0&modestbranding=1&autohide=1&showinfo=0",alt:"music video"},
-    {id:2 , src:"https://youtube.com/embed/Yay61n44nA0?controls=0&modestbranding=1&autohide=1&showinfo=0",alt:"music video"},
-    {id:3 , src:"https://youtube.com/embed/LOhFgNKu10w?controls=0&modestbranding=1&autohide=1&showinfo=0",alt:"music video"},
-    {id:4 , src:"https://youtube.com/embed/Iy89LXCdUK0?controls=0&modestbranding=1&autohide=1&showinfo=0",alt:"music video"},
+    {id:1 , src:"https://youtube.com/embed/lWKd_mMjdgA?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",alt:"music video"},
+    {id:2 , src:"https://youtube.com/embed/Yay61n44nA0?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",alt:"music video"},
+    {id:3 , src:"https://youtube.com/embed/LOhFgNKu10w?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",alt:"music video"},
+    {id:4 , src:"https://youtube.com/embed/Iy89LXCdUK0?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",alt:"music video"},
 
 ]
 
@@ -17,13 +17,13 @@ export const HeroVideo = {
 export const Doc = [  
     {id:1 , src:"https://youtube.com/embed/1QDsKJ4zRGg",
     alt:"documentary", title:'North Korean Assasin', subtitle:'Vice Documentary' },
-    {id:2 , src:"https://youtube.com/embed/UnuWINrzCyk?controls=0&modestbranding=1&autohide=1&showinfo=0",
+    {id:2 , src:"https://youtube.com/embed/UnuWINrzCyk?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",
     alt:"documentary", title:'Raincoat Killer', subtitle:'Netflix Documentary' },
-    {id:3 , src:"https://youtube.com/embed/Pdl4AhMmm1w?controls=0&modestbranding=1&autohide=1&showinfo=0",
+    {id:3 , src:"https://youtube.com/embed/Pdl4AhMmm1w?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",
     alt:"documentary", title:'Gen-z In Seoul', subtitle:'I-D Documentary' },
-    {id:4 , src:"https://youtube.com/embed/JuF50nQ-g1k?si=W1X6FFfyTBvqAf1I?controls=0&modestbranding=1&autohide=1&showinfo=0",
+    {id:4 , src:"https://youtube.com/embed/JuF50nQ-g1k?si=W1X6FFfyTBvqAf1I?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",
     alt:"documentary", title:'Hidden Master Of Buddhist Temple Food', subtitle:'Vice Documentary'  },
-    {id:5 , src:"https://www.youtube.com/embed/jRBZ4ei40Ak?si=r0kaC-jryCrXQJ0Z?controls=0&modestbranding=1&autohide=1&showinfo=0",
+    {id:5 , src:"https://www.youtube.com/embed/jRBZ4ei40Ak?si=r0kaC-jryCrXQJ0Z?controls=0&modestbranding=1&autohide=1&showinfo=0&autoplay=1&mute=0",
     alt:"documentary", title:'Late Night Munchies', subtitle:'Vice Documentary' }
 ]  
 
