@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* :root {
   --background: #ffffff;
@@ -15,17 +14,14 @@
     --foreground: #ededed;
   }
 } */
-html {
-  font-family: "Roboto Condensed", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
+
 
 body {
   color: var(--foreground);
   background: var(--background);
   background-image: url("https://mrwallpaper.com/images/hd/total-black-sand-desktop-weeqa6ir840ixaim.jpg");
   background-size:contain;
+  font-family: "Zen Dots", sans-serif;
   color: white;
 }
 
@@ -42,4 +38,9 @@ body {
 
   background-color: rgb(31, 31, 31);
 
+}
+
+.active{
+  color: rgb(27, 27, 184);
+  
 }
