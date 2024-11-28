@@ -13,7 +13,7 @@ const page = () => {
         <div className='flex flex-row flex-wrap gap-4 justify-center items-center '>
             {ThreeThree.map((item) =>
             (
-                <div className='relative group'>
+                <div key={item.id} className='relative group'>
                 <iframe className='group-hover:opacity-45 opacity-100 w-screen h-[15rem]  md:h-[20rem] md:w-[29rem]' src={item.src}></iframe>
                 <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl  text-white font-semibold">{item.title}</div>
                 <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">{item.subtitle}</div>
@@ -27,7 +27,7 @@ const page = () => {
         <div className='flex flex-row flex-wrap gap-4 justify-center items-center '>
             {Doc.map((item) =>
             (
-                <div className='relative group'>
+                <div key={item.id} className='relative group'>
                     <iframe className='group-hover:opacity-45 opacity-100 w-screen h-[15rem]  md:h-[20rem] md:w-[29rem]' allow="autoplay" src={item.src}></iframe>
                     <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl  text-white font-semibold">{item.title}</div>
                     <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">{item.subtitle}</div>

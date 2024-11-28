@@ -21,9 +21,10 @@ const ThreebyThree = () => {
                 pathname:`post/${item.id}`,
                 query: item.id
               }}
+              key={item.id}
             >
             <div className='relative group bg-red-600 ' key={item.id}>
-                <video
+                <video key={item.id}
                 // autoPlay
                 loop
                 muted
