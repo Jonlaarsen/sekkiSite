@@ -1,42 +1,47 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import { ThreeThree } from '../data/Data'
 import Link from 'next/link'
+import Modal from './Modal'
 
 
 
 const ThreebyThree = () => {
+  const [showModal, setShowModal] = useState(false)
+
 
     
   return (
     <div className='flex flex-row md:flex-col w-screen h-full justify-center items-center pb-10 '>
         <div className='flex flex-row gap-4 flex-wrap items-center justify-center'>
 
-        {ThreeThree.map((item) =>(
-            // <Link 
-            // href={`/post/${item.slug}`}
-            // item={item}
-            // >
-            <Link
-              href={{
-                pathname:`post/${item.id}`,
-                query: item.id
-              }}
+        {ThreeThree.map((item) =>
+            (
+              <div onClick={() => setShowModal(true)}
               key={item.id}
             >
-            <div className='relative group bg-black ' key={item.id}>
-                <video key={item.id}
-                // autoPlay
-                loop
-                muted
-                className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-auto' >
-                    <source src={item.src} type='video/mp4' />
-                </video>
-                <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
-                <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">{item.subtitle}</div>
-                
+              <div className='relative group bg-black ' key={item.id}>
+                  <video key={item.id}           
+                  controls={false}
+                  poster={item.thumbnail}
+                  loop
+                  muted={true}
+                  className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-auto' >
+                      <source src={item.src} type='video/mp4' />
+                  </video>
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">{item.subtitle}</div>
+              </div>
             </div>
-            </Link>
-        ))}
+            ))}
+            {/* {showModal &&
+            <div className='w-screen py-10 bg-black h-full'>
+                <video className='w-screen' src={item.src} type='video/mp4'>
+                  <source />
+                </video>
+            </div>
+            } */}
+        
 
         </div>    
     </div>

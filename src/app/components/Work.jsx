@@ -63,15 +63,16 @@ const Work = () => {
                 query: item.id
               }}
               key={item.id}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+             
              >
               <div className='relative group bg-black ' key={item.id}>
                   <video key={item.id}
-                  // autoPlay
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  poster={item.thumbnail}
                   loop
                   muted
-                  className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[50rem]' >
+                  className='group-hover:opacity-45 opacity-100  w-screen h-full md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] md:h-[12rem] lg:h-[50rem]' >
                       <source src={item.src} type='video/mp4' />
                   </video>
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
@@ -97,6 +98,7 @@ const Work = () => {
               <div className='relative group bg-black ' key={item.id}>
                   <video key={item.id}
                   // autoPlay
+                  poster={item.thumbnail}
                   loop 
                   muted
                   onMouseEnter={handleMouseEnter}

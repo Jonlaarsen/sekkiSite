@@ -2,20 +2,17 @@
 
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
+import { ThreeThree } from '../data/Data';
 
-export const inventory = [
-        {id: "1" , src:'/ConversexPop.mp4',title:"Converse X Pop", subtitle:"commercial", alt: "tommy" },
-        {id: "2" , src:'/MakersMark2.mp4' ,title:"Makers Mark", subtitle:"commercial", alt:"makers mark event video"},
-        {id: "3" , src:'/SavourPuma.mp4',title:"Savour x puma", subtitle:"commercial", alt:"savour x puma video"},
-        ]
 
 const SinglePost = () => {
     const [item, setItem] = useState();
     const params = useParams();
     const data = params.slug
+    const datastring = data.toString()
     
     const GetItem = () =>{
-    const result = inventory.find(({id}) => id === data);
+    const result = ThreeThree.find(({id}) => id === datastring);
     console.log(result);
     setItem(result)
     console.log(item)
