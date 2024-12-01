@@ -1,13 +1,23 @@
 "use client"
 import React, { useState } from 'react'
 import { ThreeThree } from '../data/Data'
-import Link from 'next/link'
-import Modal from './Modal'
+
 
 
 
 const ThreebyThree = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState(null);
+
+  const openModal = (video) => {
+    setCurrentVideo(video);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentVideo(null);
+  };
 
 
     
@@ -17,9 +27,10 @@ const ThreebyThree = () => {
 
         {ThreeThree.map((item) =>
             (
-              <div onClick={() => setShowModal(true)}
-              key={item.id}
-            >
+             <div key={item.id}
+                className="relative group bg-black cursor-pointer"
+                onClick={() => openModal(item)}
+                >
               <div className='relative group bg-black ' key={item.id}>
                   <video key={item.id}           
                   controls={false}
@@ -34,16 +45,30 @@ const ThreebyThree = () => {
               </div>
             </div>
             ))}
-            {/* {showModal &&
-            <div className='w-screen py-10 bg-black h-full'>
-                <video className='w-screen' src={item.src} type='video/mp4'>
-                  <source />
-                </video>
-            </div>
-            } */}
-        
+        </div>
+        {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          onClick={closeModal} // Closes modal when clicking outside
+        >
+          <div
+            className="bg-white rounded-lg overflow-hidden relative"
+            onClick={(e) => e.stopPropagation()} // Prevents close on inside clicks
+          >
+            <video controls autoPlay className="w-screen md:w-[50rem] h-auto">
+              <source src={currentVideo.src} type="video/mp4" />
+            </video>
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white text-3xl font-bold"
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      )} 
 
-        </div>    
     </div>
   )
 }

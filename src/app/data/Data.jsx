@@ -50,7 +50,7 @@ export const Vertical = [
     {id: 4 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/Verticals/4.+Vans+Shanghai+Vertical.m4v'
         ,title:'Vans shanghai', subtitle:'Event', thumbnail:'/4shanghai.png'},
     {id: 5 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/Verticals/5.+Vans+Caballero+Final.mov'
-        ,title:'vans x caballero', subtitle:'Event', thumbnail:'/5vansCabalero.png'},
+        ,title:'vans x caballero', subtitle:'Event', thumbnail:'/5vansCabalerro.png'},
     {id: 6 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/Verticals/6.+Nike+Teaser+4%3A5.mp4'
         ,title:'Vans breana', subtitle:'Event', thumbnail:'/6nikepalpal.png'},
     {id: 7 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/Verticals/7.+Vans+GSD+9%3A16.m4v'
