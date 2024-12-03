@@ -23,7 +23,7 @@ const Navbar = () => {
         <h1 className='text-lg md:text-5xl opacity-55 hover:opacity-100 font-semibold'>Tommy <span className='text-blue-600'>Choi</span> Visuals</h1>
         
       </div>
-      <div className='flex text-sm md:text-2xl invisible md:visible  gap-1 md:gap-3'>
+      <div className='flex text-sm md:text-4xl invisible md:visible  gap-1 md:gap-3'>
         {/* <Link href="/" className='link' >Home</Link>
         <Link href="/work" className='link'>Projects</Link>
         <Link href="/about" className='link'>Contact</Link> */}
