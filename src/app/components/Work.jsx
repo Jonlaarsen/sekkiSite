@@ -9,10 +9,10 @@ const Work = () => {
   const [isVertical, setIsVertical] = useState(false);
 
   const links = [
-    {name:'Main reels', path:'main'},
-    {name:'Vertical', path:'#vertical'},
+    {name:'Brand Films', path:'main'},
     {name:"Music Videos", path:'#music'},
-    {name:'Docummentary', path:'#doc'}
+    {name:'Docummentary', path:'#doc'},
+    {name:'Vertical', path:'#vertical'},
   ]
 
   const openModal = (media) => {
@@ -52,20 +52,20 @@ const Work = () => {
 
   return (
     <>
-      <div className="flex flex-col w-screen gap-10 py-[10rem]">
-        <div className="flex justify-evenly items-center">
+      <div className="flex flex-col w-screen gap-10 py-[5rem]">
+        <div className="flex justify-evenly  py-2 items-center">
           {links.map((link) =>
           (
             <>
             <Link key={link.name} href={link.path}>
-              <h1 className="md:text-2xl">{link.name}</h1>
+              <h1 className="md:text-2xl text-[0.7rem] opacity-55 hover:opacity-100">{link.name}</h1>
             </Link>
             </>
           )
           )}
         </div>
         <div className="flex flex-col pb-11">
-          <h1 id="main" className="text-4xl pl-10">Main Reels</h1>
+          <h1 id="main" className="text-4xl pl-10">Brand Films</h1>
           <span className="h-[1px] w-screen bg-white mb-11"></span>
           <div  className="flex flex-row flex-wrap gap-2 justify-center items-center">
             {ThreeThree.map((item) => (

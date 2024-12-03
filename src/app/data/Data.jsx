@@ -1,3 +1,4 @@
+import { title } from "process"
 
 
 export const HeroVideo = {
@@ -77,5 +78,12 @@ export const Music = [
         ,title:"Cokejazz - surfers in hawaii", subtitle:"Music Video"},    
     {id:6 , src:"https://youtube.com/embed/LOhFgNKu10w?controls=0&modestbranding=1&autohide=1&showinfo=0"
         ,title:"P1H & Harmony - GOOD FOR YOU" , subtitle:"Music Video", alt:"music video"},
+
+]
+
+export const Catagories = [
+    {id: 1 , thumbnail:"/BRANDCOVER.png", title:"BRAND FILMS"},
+    {id: 2, thumbnail:'/DOCCOVER.png', title:'DOCUMENTARIES'},
+    {id: 3, thumbnail:'MVCOVER.png', title:'MUSIC VIDEOS'},
 
 ]
