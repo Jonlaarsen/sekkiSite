@@ -125,58 +125,63 @@ const Work = () => {
       </div>
 
       <div className="flex flex-col">
-          <h1 id="music" className="text-4xl pl-10">Music Videos</h1>
-          <span className="h-[1px] w-screen bg-white mb-11"></span>
-          <div  className="flex flex-row flex-wrap gap-4 justify-center items-center">
-            {Music.map((item) => (
-              <div
-                key={item.id}
-                className="relative group bg-black cursor-pointer"
-                onClick={() => openModal(item)}
-              >
-                <iframe
-                  src={item.src}
-                  className="group-hover:opacity-45 opacity-100 w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[20rem]"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                <div className="opacity-0 h-inherit group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
-                  {item.title}
+            <h1 id="doc" className="text-4xl pl-10">Music Videos</h1>
+            <span className="h-[1px] w-screen bg-white mb-11"></span>
+            <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
+              {Music.map((item) => (
+                <div
+                  key={item.id}
+                  className="relative group cursor-pointer w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[20rem]"
+                  onClick={() => openModal(item)}
+                  style={{
+                    backgroundImage: `url(${item.thumbnail})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    
+                  }}
+                >
+                  {/* Hover Effects */}
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-0 bg-black bg-opacity-50"></div>
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                    {item.title}
+                  </div>
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-[12rem] flex justify-center items-center text-xl text-white font-normal">
+                    {item.subtitle}
+                  </div>
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-[12rem] flex justify-center items-center text-xl text-white font-normal">
-                  {item.subtitle}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-      <div className="flex flex-col">
-          <h1 id="doc" className="text-4xl pl-10">Documentary</h1>
-          <span className="h-[1px] w-screen bg-white mb-11"></span>
-          <div  className="flex flex-row flex-wrap gap-4 justify-center items-center">
-            {Doc.map((item) => (
-              <div
-                key={item.id}
-                className="relative group bg-black cursor-pointer"
-                onClick={() => openModal(item)}
-              >
-                <iframe
-                  src={item.src}
-                  className="group-hover:opacity-45 opacity-100 w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[20rem]"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-                <div className="opacity-0 h-inherit group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
-                  {item.title}
+          <div className="flex flex-col">
+            <h1 id="doc" className="text-4xl pl-10">Documentary</h1>
+            <span className="h-[1px] w-screen bg-white mb-11"></span>
+            <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
+              {Doc.map((item) => (
+                <div
+                  key={item.id}
+                  className="relative group cursor-pointer w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[20rem]"
+                  onClick={() => openModal(item)}
+                  style={{
+                    backgroundImage: `url(${item.thumbnail})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    
+                  }}
+                >
+                  {/* Hover Effects */}
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-0 bg-black bg-opacity-50"></div>
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                    {item.title}
+                  </div>
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-[12rem] flex justify-center items-center text-xl text-white font-normal">
+                    {item.subtitle}
+                  </div>
                 </div>
-                <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-[12rem] flex justify-center items-center text-xl text-white font-normal">
-                  {item.subtitle}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+
             
         {isModalOpen && currentMedia && (
           <div
