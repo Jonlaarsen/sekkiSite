@@ -3,17 +3,17 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const Page = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-    document.body.style.overflow = "hidden"; // Prevent background scroll
-  };
+  // const openModal = () => {
+  //   setIsModalOpen(true);
+  //   document.body.style.overflow = "hidden"; // Prevent background scroll
+  // };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = "auto"; // Restore background scroll
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  //   document.body.style.overflow = "auto"; // Restore background scroll
+  // };
 
   return (
     <div className="flex flex-col">
@@ -48,10 +48,11 @@ const Page = () => {
         </div>
         <div >
           <button
-            onClick={openModal}
+            
             className="md:w-[24rem] w-[10rem] p-2 rounded-2xl font-bold text-[0.7rem] md:text-xl text-blue-700 bg-white"
           >
-            LET&apos;S WORK TOGETHER
+            <Link href="mailto:Tomachoy92@gmail.com">
+            LET&apos;S WORK TOGETHER</Link>
           </button>
         </div>
         <div className="md:text-right text-center gap-5 flex flex-col">
@@ -67,7 +68,7 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modal
       {isModalOpen && (
         <div
           className="fixed inset-0 bg-black text-black bg-opacity-75 flex justify-center items-center z-50"
@@ -122,10 +123,10 @@ const Page = () => {
               >
                 Cancel
               </button>
-            </form>
+            </form> 
           </div>
         </div>
-      )}
+      )}*/}
     </div>
   );
 };
