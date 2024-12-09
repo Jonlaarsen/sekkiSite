@@ -65,7 +65,7 @@ const Work = () => {
           )}
         </div>
         <div className="flex flex-col pb-11">
-          <h1 id="main" className="text-5xl pl-10">Brand Films</h1>
+          <h1 id="main" className="text-4xl pl-10">Brand Films</h1>
           <span className="h-[1px] w-screen bg-white mb-11"></span>
           <div  className="flex flex-row flex-wrap gap-2 justify-center items-center">
             {ThreeThree.map((item) => (
@@ -97,7 +97,7 @@ const Work = () => {
         </div>
 
       <div className='flex flex-col ' >
-        <h1 id="vertical" className='text-5xl pl-10'>Vertical</h1>
+        <h1 id="vertical" className='text-4xl pl-10'>Vertical</h1>
         <span className='h-[1px] w-screen bg-white mb-11'></span>
         <div  className='flex flex-row flex-wrap gap-4 justify-center items-center '>
             {Vertical.map((item) =>
@@ -125,7 +125,7 @@ const Work = () => {
       </div>
 
       <div className="flex flex-col">
-            <h1 id="music" className="text-5xl pl-10">Music Videos</h1>
+            <h1 id="music" className="text-4xl pl-10">Music Videos</h1>
             <span className="h-[1px] w-screen bg-white mb-11"></span>
             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
               {Music.map((item) => (
@@ -154,7 +154,7 @@ const Work = () => {
           </div>
 
           <div className="flex flex-col">
-            <h1 id="doc" className="text-5xl pl-10">Documentary</h1>
+            <h1 id="doc" className="text-4xl pl-10">Documentary</h1>
             <span className="h-[1px] w-screen bg-white mb-11"></span>
             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
               {Doc.map((item) => (
