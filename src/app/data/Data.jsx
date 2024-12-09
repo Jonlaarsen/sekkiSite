@@ -13,7 +13,7 @@ export const ThreeThree = [
     {id: 2 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/2MakersMark1.mp4'
         ,title:"Makers Mark x DOKJU", subtitle:"Commercial", alt:"makers mark event video",gif:'/2GIFs.gif', thumbnail:'/makersMarkIjan.png'},
     {id: 3 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/3SavourPuma.mp4'
-        ,title:"Savour x puma", subtitle:"Commercial", alt:"savour x puma video",gif:'/3GIFs.gif', thumbnail:'/SavourXpuma.png'},
+        ,title:"Savour x puma", subtitle:"Commercial", alt:"savour x puma video",gif:'/3GIFs.gif', thumbnail:'/savourXpuma.png'},
     {id: 4 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/4KasinaGolf.mp4'
         ,title:"Kasina x FJ", subtitle:"Commercial", alt:"kasina golf video",gif:'/4GIFs.gif', thumbnail:'/kasinaGolf.png'},
     {id: 5 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/5MakersMark2.mp4'
