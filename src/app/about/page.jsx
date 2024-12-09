@@ -51,7 +51,7 @@ const Page = () => {
             onClick={openModal}
             className="md:w-[24rem] w-[10rem] p-2 rounded-2xl font-bold text-[0.7rem] md:text-xl text-blue-700 bg-white"
           >
-            LET'S WORK TOGETHER
+            LET&apos;S WORK TOGETHER
           </button>
         </div>
         <div className="md:text-right text-center gap-5 flex flex-col">
