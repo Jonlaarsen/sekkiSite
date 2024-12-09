@@ -90,7 +90,7 @@ const Categories = () => {
                   >
                     <source src={item.src} type="video/mp4" />
                   </video>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
                     {item.title}
                   </div>
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl text-white font-normal">

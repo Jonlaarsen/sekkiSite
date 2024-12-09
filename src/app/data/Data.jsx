@@ -9,40 +9,23 @@ export const HeroVideo = {
 
 export const ThreeThree = [
     {id: 1 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/1ConverseXpop.mp4?start=33'
-        ,title:"Converse X Pop", subtitle:"Commercial", alt: "tommy", 
-        gif:'https://drive.google.com/file/d/1E57Bl3OFh1P4FdmUQkdEAYO4KQQ3suIY/view?usp=drive_link', thumbnail:'/converseXpop.png' },
-
+        ,title:"Converse X Pop", subtitle:"Commercial", alt: "tommy", gif:'/1GIFs.gif', thumbnail:'/converseXpop.png' },
     {id: 2 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/2MakersMark1.mp4'
-        ,title:"Makers Mark x DOKJU", subtitle:"Commercial", alt:"makers mark event video",
-        gif:'https://drive.google.com/file/d/1YXm5a0iWvq5-WukfOPX9SD00lwi92Qon/view?usp=drive_link', thumbnail:'/makersMarkIjan.png'},
-
+        ,title:"Makers Mark x DOKJU", subtitle:"Commercial", alt:"makers mark event video",gif:'/2GIFs.gif', thumbnail:'/makersMarkIjan.png'},
     {id: 3 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/3SavourPuma.mp4'
-        ,title:"Savour x puma", subtitle:"Commercial", alt:"savour x puma video",
-        gif:'https://drive.google.com/file/d/1HqEE6KyKf7L_4GHHoOOfWRrPEUaszUCc/view?usp=drive_link', thumbnail:'/SavourXpuma.png'},
-
+        ,title:"Savour x puma", subtitle:"Commercial", alt:"savour x puma video",gif:'/3GIFs.gif', thumbnail:'/SavourXpuma.png'},
     {id: 4 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/4KasinaGolf.mp4'
-        ,title:"Kasina x FJ", subtitle:"Commercial", alt:"kasina golf video",
-        gif:'https://drive.google.com/file/d/1LYojg82EVZ9rPnVLIWWVz8un3w-uASSh/view?usp=drive_link', thumbnail:'/kasinaGolf.png'},
-
+        ,title:"Kasina x FJ", subtitle:"Commercial", alt:"kasina golf video",gif:'/4GIFs.gif', thumbnail:'/kasinaGolf.png'},
     {id: 5 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/5MakersMark2.mp4'
-        ,title:"Makers Mark", subtitle:"Commercial", alt:"makers mark event video",
-        gif:'/5GIF.gif', thumbnail:'/makersMarkDokju.png'},
-
+        ,title:"Makers Mark", subtitle:"Commercial", alt:"makers mark event video",gif:'/5GIF.gif', thumbnail:'/makersMarkDokju.png'},
     {id: 6 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/6KasinaYacht.mp4'
-        ,title:"Kasina x FJ", subtitle:"Commercial", alt:"kasina yacth video",
-        gif:'/6GIF.gif', thumbnail:'/kasinaYacht.png'},
-
+        ,title:"Kasina x FJ", subtitle:"Commercial", alt:"kasina yacth video",gif:'/6GIF.gif', thumbnail:'/kasinaYacht.png'},
     {id: 7 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/7PalpalNike.mp4'
-        ,title:"NIKE x PALPAL", subtitle:"Commercial", alt:"kasina yacth video",
-        gif:'/7GIF.gif', thumbnail:'/palpalXnike.png'},
-
+        ,title:"NIKE x PALPAL", subtitle:"Commercial", alt:"kasina yacth video",gif:'/7GIF.gif', thumbnail:'/palpalXnike.png'},
     {id: 8 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/8MEFG.mp4'
-        ,title:"Marithe et francious girbaud", subtitle:"Commercial", alt:"kasina yacth video",
-        gif:'/8GIF.gif', thumbnail:'/MEFG.png'},
-        
+        ,title:"Marithe et francious girbaud", subtitle:"Commercial", alt:"kasina yacth video",gif:'/8GIF.gif', thumbnail:'/MEFG.png'},
     {id: 9 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/9palpalVans.mp4'
-        ,title:"Vans X PALPAL", subtitle:"Commercial", alt:"kasina yacth video",
-        gif:'/9GIF.gif', thumbnail:'/palpalXvans.png'},
+        ,title:"Vans X PALPAL", subtitle:"Commercial", alt:"kasina yacth video",gif:'/9GIF.gif', thumbnail:'/palpalXvans.png'},
 
 ]
 

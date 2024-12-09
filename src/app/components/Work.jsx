@@ -65,7 +65,7 @@ const Work = () => {
           )}
         </div>
         <div className="flex flex-col pb-11">
-          <h1 id="main" className="text-4xl pl-10">Brand Films</h1>
+          <h1 id="main" className="text-5xl pl-10">Brand Films</h1>
           <span className="h-[1px] w-screen bg-white mb-11"></span>
           <div  className="flex flex-row flex-wrap gap-2 justify-center items-center">
             {ThreeThree.map((item) => (
@@ -85,7 +85,7 @@ const Work = () => {
                 >
                   <source src={item.src} type="video/mp4" />
                 </video>
-                <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
                   {item.title}
                 </div>
                 <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl text-white font-normal">
@@ -97,7 +97,7 @@ const Work = () => {
         </div>
 
       <div className='flex flex-col ' >
-        <h1 id="vertical" className='text-4xl pl-10'>Vertical</h1>
+        <h1 id="vertical" className='text-5xl pl-10'>Vertical</h1>
         <span className='h-[1px] w-screen bg-white mb-11'></span>
         <div  className='flex flex-row flex-wrap gap-4 justify-center items-center '>
             {Vertical.map((item) =>
@@ -117,7 +117,7 @@ const Work = () => {
                   className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-screen object-cover md:h-[12rem] lg:h-auto' >
                       <source src={item.src} type='video/mp4' />
                   </video>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">{item.title}</div>
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">{item.subtitle}</div>
               </div>
             ))}
@@ -125,7 +125,7 @@ const Work = () => {
       </div>
 
       <div className="flex flex-col">
-            <h1 id="doc" className="text-4xl pl-10">Music Videos</h1>
+            <h1 id="doc" className="text-5xl pl-10">Music Videos</h1>
             <span className="h-[1px] w-screen bg-white mb-11"></span>
             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
               {Music.map((item) => (
@@ -142,7 +142,7 @@ const Work = () => {
                 >
                   {/* Hover Effects */}
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-0 bg-black bg-opacity-50"></div>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 md:top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 md:top-20 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
                     {item.title}
                   </div>
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 md:top-[12rem] flex justify-center items-center text-xl text-white font-normal">
@@ -154,7 +154,7 @@ const Work = () => {
           </div>
 
           <div className="flex flex-col">
-            <h1 id="doc" className="text-4xl pl-10">Documentary</h1>
+            <h1 id="doc" className="text-5xl pl-10">Documentary</h1>
             <span className="h-[1px] w-screen bg-white mb-11"></span>
             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
               {Doc.map((item) => (
@@ -171,7 +171,7 @@ const Work = () => {
                 >
                   {/* Hover Effects */}
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-0 bg-black bg-opacity-50"></div>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 md:top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 md:top-20 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
                     {item.title}
                   </div>
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 md:top-[12rem] flex justify-center items-center text-xl text-white font-normal">
@@ -208,7 +208,7 @@ const Work = () => {
               )}
               <button
                 onClick={closeModal}
-                className="absolute top-4 right-4 text-white text-3xl font-bold"
+                className="absolute top-4 right-4 text-white text-2xl font-bold"
               >
                 &times;
               </button>
