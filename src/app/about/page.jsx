@@ -38,7 +38,7 @@ const Page = () => {
       </div>
       <div className="flex md:flex-row gap-10 md:gap-0 flex-col w-screen justify-between items-center px-7 md:h-[20rem]">
         <div className=" text-center md:text-left pt-10 md:pt-0">
-          <h1 className="text-4xl text-blue-700 md:pb-10">Expertise</h1>
+          <h1 className="text-4xl text-blue-700 pb-10">Expertise</h1>
           <div className="text-2xl gap-2 flex flex-col">
             <h2>Visual Aids</h2>
             <h2>Music Videos</h2>
