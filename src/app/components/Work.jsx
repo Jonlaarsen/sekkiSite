@@ -9,7 +9,7 @@ const Work = () => {
   const [isVertical, setIsVertical] = useState(false);
 
   const links = [
-    {name:'Brand Films', path:'main'},
+    {name:'Brand Films', path:'#main'},
     {name:"Music Videos", path:'#music'},
     {name:'Docummentary', path:'#doc'},
     {name:'Vertical', path:'#vertical'},
@@ -53,7 +53,7 @@ const Work = () => {
   return (
     <>
       <div className="flex flex-col w-screen gap-10 py-[5rem]">
-        <div className="flex justify-evenly  py-2 items-center">
+        <div className="flex justify-evenly pt-[5rem] items-center">
           {links.map((link) =>
           (
             <>
@@ -125,7 +125,7 @@ const Work = () => {
       </div>
 
       <div className="flex flex-col">
-            <h1 id="doc" className="text-5xl pl-10">Music Videos</h1>
+            <h1 id="music" className="text-5xl pl-10">Music Videos</h1>
             <span className="h-[1px] w-screen bg-white mb-11"></span>
             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
               {Music.map((item) => (
