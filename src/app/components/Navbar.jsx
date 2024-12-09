@@ -21,15 +21,15 @@ const Navbar = () => {
     <div className='flex h-[5rem] items-center z-20 fixed justify-between top-0 left-0 w-screen px-4 md:px-8 shadow'>
       {/* Logo */}
       <div className='text-5xl'>
-        <h1 className='text-lg md:text-5xl opacity-55 hover:opacity-100 font-semibold'>
-          Tommy <span className='text-blue-600'>Choi</span> Visuals
+        <h1 className='text-lg md:text-5xl opacity-75 hover:opacity-100 font-semibold'>
+         <Link href={"/"}>Tommy <span className='text-blue-600'>Choi</span> Visuals</Link> 
         </h1>
       </div>
 
       {/* Desktop Links */}
       <div className='hidden md:flex text-sm md:text-4xl gap-1 md:gap-3'>
         {links.map((link) => (
-          <div key={link.name} className='opacity-55 hover:opacity-100'>
+          <div key={link.name} className='opacity-75 hover:opacity-100'>
             <Link href={link.path} className={isActive(link.path) ? 'active' : ''}>{link.name}</Link>
           </div>
         ))}

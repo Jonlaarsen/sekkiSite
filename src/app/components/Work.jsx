@@ -142,10 +142,10 @@ const Work = () => {
                 >
                   {/* Hover Effects */}
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-0 bg-black bg-opacity-50"></div>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 md:top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
                     {item.title}
                   </div>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-[12rem] flex justify-center items-center text-xl text-white font-normal">
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 md:top-[12rem] flex justify-center items-center text-xl text-white font-normal">
                     {item.subtitle}
                   </div>
                 </div>
@@ -171,10 +171,10 @@ const Work = () => {
                 >
                   {/* Hover Effects */}
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-0 bg-black bg-opacity-50"></div>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 md:top-20 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
                     {item.title}
                   </div>
-                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-[12rem] flex justify-center items-center text-xl text-white font-normal">
+                  <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 md:top-[12rem] flex justify-center items-center text-xl text-white font-normal">
                     {item.subtitle}
                   </div>
                 </div>
