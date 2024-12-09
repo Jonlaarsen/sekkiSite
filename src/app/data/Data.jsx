@@ -17,7 +17,7 @@ export const ThreeThree = [
     {id: 4 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/4KasinaGolf.mp4'
         ,title:"Kasina x FJ", subtitle:"Commercial", alt:"kasina golf video",gif:'/4GIFs.gif', thumbnail:'/kasinaGolf.png'},
     {id: 5 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/5MakersMark2.mp4'
-        ,title:"Makers Mark", subtitle:"Commercial", alt:"makers mark event video",gif:'/5GIF.gif', thumbnail:'/makersMarkDokju.png'},
+        ,title:"Makers Mark x Dokju", subtitle:"Commercial", alt:"makers mark event video",gif:'/5GIF.gif', thumbnail:'/makersMarkDokju.png'},
     {id: 6 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/6KasinaYacht.mp4'
         ,title:"Kasina x FJ", subtitle:"Commercial", alt:"kasina yacth video",gif:'/6GIF.gif', thumbnail:'/kasinaYacht.png'},
     {id: 7 , src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/7PalpalNike.mp4'
