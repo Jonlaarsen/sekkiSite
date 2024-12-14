@@ -1,8 +1,10 @@
+"use client"
 import React from 'react'
 import { HeroVideo } from '../data/Data'
 
 
 const Hero = () => {
+  
   return (
     <div className='md:min-h-screen pb-[5rem]  '>
       <div className='flex flex-col items-center gap-8 justify-center'>
@@ -10,9 +12,9 @@ const Hero = () => {
           <video src={HeroVideo.src}
             playsInline
             autoPlay
+            poster='loading...'
             loop
             muted
-
             className='w-screen h-screen object-cover'></video>
         </div>
       </div>
