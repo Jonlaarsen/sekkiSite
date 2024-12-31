@@ -24,10 +24,10 @@ const Page = () => {
         bg-[url('https://images.squarespace-cdn.com/content/v1/63256dcfb1b3af33710daf81/b521df2d-c041-41bb-96cd-f1d49783e92c/Mountain+ollie.jpg?format=2500w')]
       "
       >
-        <h1 className="md:ml-7 px-2 mt-[15rem] font-bold text-3xl md:text-4xl">
+        <h1 className="md:ml-7 px-2 mt-[10rem]  font-bold text-xl md:text-4xl">
           ABOUT <span className="text-blue-700">ME</span>
         </h1>
-        <p className="md:ml-7 md:mt-3 md:w-[37rem] mt-[30rem] font-semibold brightness-200 px-2 w-screen text-[0.7rem] md:text-xl">
+        <p className="md:ml-7 md:mt-3 md:w-[37rem] font-semibold brightness-200 px-2 w-screen text-[0.7rem] md:text-xl">
           Tommy Choi is a cinematographer, editor, and director collaborating
           with production companies, brands, and agencies from Seoul, Korea to
           Los Angeles, California. He is currently based in Seoul Korea,
