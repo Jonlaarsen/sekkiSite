@@ -15,6 +15,7 @@ const Hero = () => {
           className="flex top-0 left-0 h-[100vh] w-auto md:w-screen md:h-screen items-center justify-center"
         >
           <video
+            rel="preload"
             src={HeroVideo.src}
             playsInline
             autoPlay
