@@ -3,7 +3,7 @@
 
 export const HeroVideo = {
     id: 1, 
-    src:"https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/TVC.mp4", 
+    src:"https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/tommyhero12.mp4", 
     alt:"TOMMY CHOI VISUAL "
 }
 
@@ -58,29 +58,29 @@ export const ThreeThree = [
         gif:'/6GIF.gif', 
         thumbnail:'/kasinaYacht.png'},
         
-    {id: 7 , 
-        src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/7PalpalNike.mp4',
-        title:"NIKE x PALPAL", 
-        subtitle:"Commercial", 
-        alt:"kasina yacth video",
-        gif:'/7GIF.gif', 
-        thumbnail:'/palpalXnike.png'},
+    // {id: 7 , 
+    //     src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/7PalpalNike.mp4',
+    //     title:"NIKE x PALPAL", 
+    //     subtitle:"Commercial", 
+    //     alt:"kasina yacth video",
+    //     gif:'/7GIF.gif', 
+    //     thumbnail:'/palpalXnike.png'},
         
-    {id: 8 , 
-        src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/8MEFG.mp4',
-        title:"Marithe et francious girbaud", 
-        subtitle:"Commercial", 
-        alt:"kasina yacth video",
-        gif:'/8GIF.gif', 
-        thumbnail:'/MEFG.png'},
+    // {id: 8 , 
+    //     src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/8MEFG.mp4',
+    //     title:"Marithe et francious girbaud", 
+    //     subtitle:"Commercial", 
+    //     alt:"kasina yacth video",
+    //     gif:'/8GIF.gif', 
+    //     thumbnail:'/MEFG.png'},
         
-    {id: 9 , 
-        src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/9palpalVans.mp4',
-        title:"Vans X PALPAL", 
-        subtitle:"Commercial", 
-        alt:"kasina yacth video",
-        gif:'/9GIF.gif', 
-        thumbnail:'/palpalXvans.png'},
+    // {id: 9 , 
+    //     src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/9palpalVans.mp4',
+    //     title:"Vans X PALPAL", 
+    //     subtitle:"Commercial", 
+    //     alt:"kasina yacth video",
+    //     gif:'/9GIF.gif', 
+    //     thumbnail:'/palpalXvans.png'},
         
 
 ]
