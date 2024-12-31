@@ -32,7 +32,10 @@ const ThreebyThree = () => {
                 onClick={() => openModal(item)}
                 >
               <div className='relative group bg-black ' key={item.id}>
-                  <video key={item.id}           
+                <img src={item.gif} 
+                className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-auto' 
+                alt="" />
+                  {/* <video key={item.id}           
                   controls={false}
                   poster={item.gif}
                   loading="lazy" 
@@ -40,7 +43,7 @@ const ThreebyThree = () => {
                   muted={true}
                   className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-auto' >
                       <source src={item.src} type='video/mp4' />
-                  </video>
+                  </video> */}
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">{item.subtitle}</div>
               </div>
