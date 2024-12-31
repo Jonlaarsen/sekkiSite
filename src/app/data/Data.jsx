@@ -74,13 +74,13 @@ export const ThreeThree = [
         gif:'/8GIF.gif', 
         thumbnail:'/MEFG.png'},
         
-    {id: 9 , 
-        src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/9palpalVans.mp4',
-        title:"Vans X PALPAL", 
-        subtitle:"Commercial", 
-        alt:"kasina yacth video",
-        gif:'/9GIF.gif', 
-        thumbnail:'/palpalXvans.png'},
+    // {id: 9 , 
+    //     src:'https://videos-clone-local-tommy.s3.ap-northeast-2.amazonaws.com/9palpalVans.mp4',
+    //     title:"Vans X PALPAL", 
+    //     subtitle:"Commercial", 
+    //     alt:"kasina yacth video",
+    //     gif:'/9GIF.gif', 
+    //     thumbnail:'/palpalXvans.png'},
         
 
 ]

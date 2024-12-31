@@ -24,10 +24,10 @@ const Page = () => {
         bg-[url('https://images.squarespace-cdn.com/content/v1/63256dcfb1b3af33710daf81/b521df2d-c041-41bb-96cd-f1d49783e92c/Mountain+ollie.jpg?format=2500w')]
       "
       >
-        <h1 className="md:ml-7 mt-[10rem] text-xl md:text-4xl">
+        <h1 className="md:ml-7 px-2 mt-[10rem] text-xl md:text-4xl">
           ABOUT <span className="text-blue-700">ME</span>
         </h1>
-        <p className="md:ml-7 md:mt-3 md:w-[37rem] w-screen text-[0.7rem] md:text-xl">
+        <p className="md:ml-7 md:mt-3 md:w-[37rem] px-2 w-screen text-[0.7rem] md:text-xl">
           Tommy Choi is a cinematographer, editor, and director collaborating
           with production companies, brands, and agencies from Seoul, Korea to
           Los Angeles, California. He is currently based in Seoul Korea,
@@ -36,7 +36,7 @@ const Page = () => {
           documentaries.
         </p>
       </div>
-      <div className="flex md:flex-row gap-10 md:gap-0 flex-col w-screen justify-between items-center px-7 md:h-[20rem]">
+      <div className="flex md:flex-row gap-10 md:gap-0 flex-col w-screen justify-between items-center px-10 md:h-[20rem]">
         <div className=" text-center md:text-left pt-10 md:pt-0">
           <h1 className="text-4xl text-blue-700 pb-10">Expertise</h1>
           <div className="text-2xl gap-2 flex flex-col">
