@@ -18,11 +18,10 @@ const Page = () => {
   return (
     <div className="flex flex-col">
       <div
+        style={{backgroundImage:'url("/123.JPG")'}}
         className="
         flex flex-col top-0 left-0 w-screen h-screen md:h-[40rem]
-        bg-cover bg-no-repeat bg-center 
-        bg-[url('https://images.squarespace-cdn.com/content/v1/63256dcfb1b3af33710daf81/b521df2d-c041-41bb-96cd-f1d49783e92c/Mountain+ollie.jpg?format=2500w')]
-      "
+        bg-cover bg-no-repeat bg-center       "
       >
         <h1 className="md:ml-7 px-2 mt-[10rem]  font-bold text-xl md:text-4xl">
           ABOUT <span className="text-blue-700">ME</span>
