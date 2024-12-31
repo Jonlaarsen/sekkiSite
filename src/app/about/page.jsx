@@ -48,7 +48,7 @@ const Page = () => {
         <div >
           <button
             
-            className="md:w-[24rem] w-[10rem] p-2 rounded-2xl font-bold text-[0.7rem] md:text-xl text-blue-700 bg-white"
+            className="md:w-[24rem] w-[10rem] p-2 rounded-2xl font-bold text-[0.7rem] md:text-xl text-blue-700 bg-opacity-55 hover:bg-opacity-100 bg-white"
           >
             <Link href="mailto:Tomachoy92@gmail.com">
             LET&apos;S WORK TOGETHER</Link>
