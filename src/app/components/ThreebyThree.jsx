@@ -33,7 +33,7 @@ const ThreebyThree = () => {
                 >
               <div className='relative group bg-black ' key={item.id}>
                 <img src={item.gif} 
-                className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-auto' 
+                className='group-hover:opacity-45 opacity-100  w-screen md:w-[20rem] lg:w-[29rem] 2xl:w-[35rem] h-auto md:h-[12rem] lg:h-auto' 
                 alt="" />
                   {/* <video key={item.id}           
                   controls={false}
