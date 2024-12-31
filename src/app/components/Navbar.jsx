@@ -18,7 +18,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='flex h-[5rem] items-center z-20 fixed justify-between top-0 left-0 w-screen px-4 md:px-8 shadow'>
+    <div className='flex h-[5rem] items-center z-20 fixed justify-between top-0 left-0 w-screen px-4 md:px-8'>
       {/* Logo */}
       <div className='text-5xl'>
         <h1 className='text-lg md:text-5xl opacity-75 hover:opacity-100 font-semibold'>
