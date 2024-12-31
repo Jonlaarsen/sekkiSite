@@ -9,9 +9,7 @@ export default function Home() {
     <div>
       
       <Hero/>
-      <div className="hidden md:block">
       <ThreebyThree/>
-      </div>
       <Categories/>
       
       
