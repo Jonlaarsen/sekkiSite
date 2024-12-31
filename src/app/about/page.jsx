@@ -20,8 +20,8 @@ const Page = () => {
       <div
         style={{backgroundImage:'url("/123.JPG")'}}
         className="
-        flex flex-col top-0 left-0 w-screen h-screen md:h-[40rem]
-        bg-cover bg-no-repeat bg-center       "
+        flex flex-col top-0 left-0 w-screen h-screen md:h-[60rem]
+        bg-cover bg-no-repeat bg-top       "
       >
         <h1 className="md:ml-7 px-2 mt-[10rem]  font-bold text-xl md:text-4xl">
           ABOUT <span className="text-blue-700">ME</span>
