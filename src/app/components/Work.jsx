@@ -27,7 +27,6 @@ const Work = () => {
     document.body.style.overflow = "auto"; // Re-enable background scroll
   };
 
-  // Check the aspect ratio of the video when the modal opens
   useEffect(() => {
     if (currentMedia && currentMedia.src && !currentMedia.src.includes("youtube.com")) {
       const videoElement = document.createElement("video");
@@ -38,7 +37,7 @@ const Work = () => {
       };
     }
   }, [currentMedia]);
-
+  
 
   const handleMouseEnter = (e) => {
     const vid = e.target;
@@ -56,11 +55,11 @@ const Work = () => {
         <div className="flex justify-evenly pt-[5rem] items-center">
           {links.map((link) =>
           (
-            <>
-            <Link key={link.name} href={link.path}>
+            <div key={link.name}>
+            <Link  href={link.path}>
               <h1 className="md:text-2xl text-[0.7rem] opacity-55 hover:opacity-100">{link.name}</h1>
             </Link>
-            </>
+            </div>
           )
           )}
         </div>
