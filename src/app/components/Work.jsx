@@ -1,7 +1,6 @@
 
         "use client"
 import React, { useEffect, useState } from "react";
-import { Doc, Music, ThreeThree, Vertical } from "../data/Data";
 import Link from "next/link";
 
 const Work = ({videos, heroVideos}) => {
