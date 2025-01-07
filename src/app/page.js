@@ -1,15 +1,19 @@
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ThreebyThree from "./components/ThreebyThree";
 import Categories from "./components/Categories";
-import Footer from "./components/Footer";
+import { fetchHero, fetchUploads } from './lib/Fetch';
 
-export default function Home() {
+
+
+
+export default async function Home() {
+  const heroVideos = await fetchHero(); // Fetch uploads data from the database
+
   return (
     <div>
       
       <Hero/>
-      <ThreebyThree/>
+      <ThreebyThree heroVideos={heroVideos} />
       <Categories/>
       
       

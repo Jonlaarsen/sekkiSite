@@ -1,13 +1,17 @@
 import React from 'react'
 import Work from '../components/Work'
+import { fetchHero, fetchUploads } from '../lib/Fetch'
 
-const page = () => {
+export default async function page() {
+  const videos = await fetchUploads();
+  const heroVideos =  await fetchHero();
+  console.log(heroVideos)
 
   return (
     <>
-    <Work/>
+    <Work videos={videos}  heroVideos={heroVideos}/>
     </>
   )
 }
 
-export default page
+
