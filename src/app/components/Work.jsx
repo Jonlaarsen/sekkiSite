@@ -57,8 +57,8 @@ const Work = ({videos, heroVideos}) => {
           )
           )}
         </div>
-        <div className="flex flex-col pb-11">
-          <h1 id="main" className="text-4xl pl-10">Brand Films</h1>
+        <div className="flex flex-col md:pt-[3rem]">
+          <h1 id="main" className="text-4xl text-center">Brand Films</h1>
           <span className="h-[1px] w-screen bg-white mb-11"></span>
           <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {heroVideos.map((item) =>
@@ -81,8 +81,8 @@ const Work = ({videos, heroVideos}) => {
           </div>
         </div>
 
-      <div className='flex flex-col ' >
-        <h1 id="vertical" className='text-4xl pl-10'>Vertical</h1>
+      <div className='flex md:pt-[3rem] flex-col ' >
+        <h1 id="vertical" className='text-4xl text-center'>Vertical</h1>
         <span className='h-[1px] w-screen bg-white mb-11'></span>
         <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
         {videos
@@ -109,8 +109,8 @@ const Work = ({videos, heroVideos}) => {
         </div>
       </div>
 
-      <div className="flex flex-col">
-            <h1 id="music" className="text-4xl pl-10">Music Videos</h1>
+      <div className="flex md:pt-[3rem] flex-col">
+            <h1 id="music" className="text-4xl text-center">Music Videos</h1>
             <span className="h-[1px] w-screen bg-white mb-11"></span>
             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
@@ -139,8 +139,8 @@ const Work = ({videos, heroVideos}) => {
             </div>
           </div>
 
-          <div className="flex flex-col">
-            <h1 id="doc" className="text-4xl pl-10">Documentary</h1>
+          <div className="flex md:pt-[3rem] flex-col">
+            <h1 id="doc" className="text-4xl text-center">Documentary</h1>
             <span className="h-[1px] w-screen bg-white mb-11"></span>
             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  '>              
               {videos
@@ -262,7 +262,7 @@ const Work = ({videos, heroVideos}) => {
 //           )}
 //         </div>
 //         <div className="flex flex-col pb-11">
-//           <h1 id="main" className="text-4xl pl-10">Brand Films</h1>
+//           <h1 id="main" className="text-4xl text-center">Brand Films</h1>
 //           <span className="h-[1px] w-screen bg-white mb-11"></span>
 //           <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
 //           {heroVideos.map((item) =>
@@ -312,7 +312,7 @@ const Work = ({videos, heroVideos}) => {
 //       </div>
 
 //       <div className="flex flex-col">
-//             <h1 id="music" className="text-4xl pl-10">Music Videos</h1>
+//             <h1 id="music" className="text-4xl text-center">Music Videos</h1>
 //             <span className="h-[1px] w-screen bg-white mb-11"></span>
 //             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
 //             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
@@ -342,7 +342,7 @@ const Work = ({videos, heroVideos}) => {
 //           </div>
 
 //           <div className="flex flex-col">
-//             <h1 id="doc" className="text-4xl pl-10">Documentary</h1>
+//             <h1 id="doc" className="text-4xl text-center">Documentary</h1>
 //             <span className="h-[1px] w-screen bg-white mb-11"></span>
 //             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 '>              
 //               {videos
