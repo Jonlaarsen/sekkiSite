@@ -23,7 +23,7 @@ const ThreebyThree = ({heroVideos}) => {
 console.log(heroVideos)    
   return (
     <div className='flex flex-row md:flex-col w-screen h-full justify-center items-center pb-10 '>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 
         {heroVideos.map((item) =>
             (
@@ -32,7 +32,7 @@ console.log(heroVideos)
                 onClick={() => openModal(item)}
                 >
               <div className='relative group bg-black ' key={item.id}>
-                <img src={item.gifurl}
+                <img src={item.imgurl}
                       className="object-cover relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
                       alt="" />
                   {/* <video key={item.id}           

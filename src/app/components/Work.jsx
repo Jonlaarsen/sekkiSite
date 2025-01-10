@@ -58,8 +58,7 @@ const Work = ({videos, heroVideos}) => {
           )}
         </div>
         <div className="flex flex-col md:pt-[3rem]">
-          <h1 id="main" className="text-4xl text-center">Brand Films</h1>
-          <span className="h-[1px] w-screen bg-white mb-11"></span>
+          <h1 id="main" className="text-4xl uppercase pb-[3rem] text-center">Brand Films</h1>
           <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {heroVideos.map((item) =>
             (
@@ -70,7 +69,7 @@ const Work = ({videos, heroVideos}) => {
               <div className=' relative group bg-black ' key={item.id}>
                 <img
                   src={item.imgurl}
-                  className="object-cover relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
+                  className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
                   alt=""
                 />
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
@@ -82,8 +81,7 @@ const Work = ({videos, heroVideos}) => {
         </div>
 
       <div className='flex md:pt-[3rem] flex-col ' >
-        <h1 id="vertical" className='text-4xl text-center'>Vertical</h1>
-        <span className='h-[1px] w-screen bg-white mb-11'></span>
+      <h1 id="vertical" className="text-4xl uppercase pb-[3rem] text-center">vertical</h1>
         <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
         {videos
           .filter((item) => item.category === "vertical")
@@ -110,9 +108,8 @@ const Work = ({videos, heroVideos}) => {
       </div>
 
       <div className="flex md:pt-[3rem] flex-col">
-            <h1 id="music" className="text-4xl text-center">Music Videos</h1>
-            <span className="h-[1px] w-screen bg-white mb-11"></span>
-            <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
+            <h1 id="music" className="text-4xl uppercase pb-[3rem] text-center">Music Videos</h1>
+              <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
               {videos
                 .filter((item) => item.category === "Music Video")
@@ -124,7 +121,7 @@ const Work = ({videos, heroVideos}) => {
                   >
                     <img
                       src={item.imgurl}
-                      className="object-cover relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
+                      className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
                       alt=""
                     />
                     <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
@@ -140,9 +137,8 @@ const Work = ({videos, heroVideos}) => {
           </div>
 
           <div className="flex md:pt-[3rem] flex-col">
-            <h1 id="doc" className="text-4xl text-center">Documentary</h1>
-            <span className="h-[1px] w-screen bg-white mb-11"></span>
-            <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  '>              
+            <h1 id="doc" className="text-4xl uppercase pb-[3rem] text-center">Documentary</h1>
+              <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  '>              
               {videos
                 .filter((item) => item.category === "Documentary")
                 .map((item) => (
@@ -153,7 +149,7 @@ const Work = ({videos, heroVideos}) => {
                   >
                     <img
                       src={item.imgurl}
-                      className="object-cover relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
+                      className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
                       alt=""
                     />
                     <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
@@ -174,15 +170,23 @@ const Work = ({videos, heroVideos}) => {
             onClick={closeModal}
           >
             <div
-              className={`bg-black rounded-lg relative overflow-hidden ${
-                isVertical ? "w-[90vw] h-[90vh]" : "w-[90vw] max-h-[90vh]"
+              className={`bg-black  relative overflow-hidden ${
+                currentMedia.category === "vertical"
+                  ? "w-screen md:w-[54vh] h-[90vh] md:h-[95vh] mx-auto"
+                  : "w-screen md:w-[90vw] h-[50vh] md:h-[80vh]"
               }`}
               onClick={(e) => e.stopPropagation()}
             >
-            <iframe controls autoPlay className="w-screen md:w-[60rem] h-[35rem]"
-             allow="autoplay"
-             src={currentMedia.videourl} type="video/mp4" />
-            
+              <iframe
+                className={`${
+                  currentMedia.category === "vertical"
+                    ? "w-screen md:w-[54vh] h-[90vh] md:h-[95vh]"
+                    : "w-full h-full"
+                }`}
+                allow="autoplay"
+                src={currentMedia.videourl}
+                type="video/mp4"
+              />
 
             <button
               onClick={closeModal}
@@ -262,9 +266,8 @@ const Work = ({videos, heroVideos}) => {
 //           )}
 //         </div>
 //         <div className="flex flex-col pb-11">
-//           <h1 id="main" className="text-4xl text-center">Brand Films</h1>
-//           <span className="h-[1px] w-screen bg-white mb-11"></span>
-//           <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+//           <h1 id="main" className="text-4xl uppercase pb-[3rem] text-center">Brand Films</h1>
+// //           <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
 //           {heroVideos.map((item) =>
 //             (
 //              <div key={item.id}
@@ -312,9 +315,8 @@ const Work = ({videos, heroVideos}) => {
 //       </div>
 
 //       <div className="flex flex-col">
-//             <h1 id="music" className="text-4xl text-center">Music Videos</h1>
-//             <span className="h-[1px] w-screen bg-white mb-11"></span>
-//             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
+//             <h1 id="music" className="text-4xl uppercase pb-[3rem] text-center">Music Videos</h1>
+//   //             <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
 //             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 //               {videos
 //                 .filter((item) => item.category === "Music Video")
@@ -342,9 +344,8 @@ const Work = ({videos, heroVideos}) => {
 //           </div>
 
 //           <div className="flex flex-col">
-//             <h1 id="doc" className="text-4xl text-center">Documentary</h1>
-//             <span className="h-[1px] w-screen bg-white mb-11"></span>
-//             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 '>              
+//             <h1 id="doc" className="text-4xl uppercase pb-[3rem] text-center">Documentary</h1>
+//   //             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 '>              
 //               {videos
 //                 .filter((item) => item.category === "Music Video")
 //                 .map((item) => (
