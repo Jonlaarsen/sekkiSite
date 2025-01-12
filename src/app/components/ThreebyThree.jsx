@@ -10,6 +10,9 @@ const ThreebyThree = ({heroVideos}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentVideo, setCurrentVideo] = useState(null);
 
+  const sortedData = heroVideos.sort((a, b) => a.id - b.id);
+
+
   const openModal = (video) => {
     setCurrentVideo(video);
     console.log(video.videourl )
@@ -26,7 +29,7 @@ console.log(heroVideos)
     <div className='flex flex-row md:flex-col w-screen h-full justify-center items-center pb-10 '>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
 
-        {heroVideos.map((item) =>
+        {sortedData.map((item) =>
             (
              <div key={item.id}
                 className="relative group bg-black cursor-pointer"

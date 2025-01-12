@@ -8,6 +8,10 @@ const Work = ({videos, heroVideos}) => {
   const [currentMedia, setCurrentMedia] = useState(null);
   const [isVertical, setIsVertical] = useState(false);
 
+  const sortedVideos = videos.sort((a, b) => a.id - b.id);
+  const sortedHero = heroVideos.sort((a, b) => a.id - b.id);
+
+
   const links = [
     {name:'Brand Films', path:'#main'},
     {name:'Vertical', path:'#vertical'},
@@ -60,7 +64,7 @@ const Work = ({videos, heroVideos}) => {
         <div className="flex flex-col md:pt-[3rem]">
           <h1 id="main" className="text-4xl uppercase pb-[3rem] text-center">Brand Films</h1>
           <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-          {heroVideos.map((item) =>
+          {sortedHero.map((item) =>
             (
              <div key={item.id}
                 className="relative group bg-black cursor-pointer"
@@ -83,7 +87,7 @@ const Work = ({videos, heroVideos}) => {
       <div className='flex md:pt-[3rem] flex-col ' >
       <h1 id="vertical" className="text-4xl uppercase pb-[3rem] text-center">vertical</h1>
         <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
-        {videos
+        {sortedVideos
           .filter((item) => item.category === "vertical")
           .map((item) => (
             <div
@@ -111,7 +115,7 @@ const Work = ({videos, heroVideos}) => {
             <h1 id="music" className="text-4xl uppercase pb-[3rem] text-center">Music Videos</h1>
               <div className="flex flex-row flex-wrap gap-4 justify-center items-center">
             <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
-              {videos
+              {sortedVideos
                 .filter((item) => item.category === "Music Video")
                 .map((item) => (
                   <div
@@ -139,7 +143,7 @@ const Work = ({videos, heroVideos}) => {
           <div className="flex md:pt-[3rem] flex-col">
             <h1 id="doc" className="text-4xl uppercase pb-[3rem] text-center">Documentary</h1>
               <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  '>              
-              {videos
+              {sortedVideos
                 .filter((item) => item.category === "Documentary")
                 .map((item) => (
                   <div
