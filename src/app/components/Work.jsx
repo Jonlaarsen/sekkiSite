@@ -69,7 +69,7 @@ const Work = ({videos, heroVideos}) => {
               <div className=' relative group bg-black ' key={item.id}>
                 <img
                   src={item.imgurl}
-                  className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
+                  className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full  h-[12rem] md:h-[12rem] lg:h-[16rem] 2xl:h-[20rem]"
                   alt=""
                 />
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
@@ -121,7 +121,7 @@ const Work = ({videos, heroVideos}) => {
                   >
                     <img
                       src={item.imgurl}
-                      className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
+                      className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-full h-[12rem] md:h-[12rem] lg:h-[16rem] 2xl:h-[20rem]"
                       alt=""
                     />
                     <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
@@ -149,7 +149,7 @@ const Work = ({videos, heroVideos}) => {
                   >
                     <img
                       src={item.imgurl}
-                      className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-[35rem] h-[12rem] md:h-[12rem] lg:h-[16rem]"
+                      className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full 2xl:w-full h-[12rem] md:h-[12rem] lg:h-[16rem] 2xl:h-[20rem]"
                       alt=""
                     />
                     <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-2xl md:text-4xl uppercase text-white font-semibold">
