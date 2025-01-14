@@ -72,7 +72,7 @@ const Work = ({videos, heroVideos}) => {
                 >
               <div className=' relative group bg-black ' key={item.id}>
                 <img
-                  src={`${item.id}GIF.gif`}
+                  src={item.gifurl}
                   loading="lazy"
                   className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full  h-[12rem] md:h-[12rem] lg:h-[20rem] 2xl:h-[20rem]"
                   alt=""
