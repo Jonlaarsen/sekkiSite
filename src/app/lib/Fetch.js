@@ -1,11 +1,5 @@
 import { neon } from '@neondatabase/serverless';
 
-
-
-
-// fetches data
-
-
 export const fetchUploads = async () => {
   const sql = neon(`${process.env.DATABASE_URL}`);
   try {
