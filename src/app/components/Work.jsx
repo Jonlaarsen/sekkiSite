@@ -63,28 +63,30 @@ const Work = ({ videos, heroVideos }) => {
             Brand Films
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-            {sortedHero.map((item) => (
-              <div
-                key={item.id}
-                className="relative group bg-black cursor-pointer"
-                onClick={() => openModal(item)}
-              >
-                <div className=" relative group bg-black " key={item.id}>
-                  <img
-                    src={item.imgurl}
-                    loading="lazy"
-                    className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full  h-[12rem] md:h-[12rem] lg:h-[17rem] 2xl:h-[18rem]"
-                    alt=""
-                  />
-                  <div className="opacity-0 px-2 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
-                    {item.title}
-                  </div>
-                  <div className="opacity-0 px-2 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">
-                    {item.subtitle}
+            {sortedVideos
+              .filter((item) => item.category === "Brand Film")
+              .map((item) => (
+                <div
+                  key={item.id}
+                  className="relative group bg-black cursor-pointer"
+                  onClick={() => openModal(item)}
+                >
+                  <div className=" relative group bg-black " key={item.id}>
+                    <img
+                      src={item.imgurl}
+                      loading="lazy"
+                      className="object-cover group-hover:opacity-45 relative group cursor-pointer w-screen md:w-[20rem] lg:w-full  h-[12rem] md:h-[12rem] lg:h-[17rem] 2xl:h-[18rem]"
+                      alt=""
+                    />
+                    <div className="opacity-0 px-2 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">
+                      {item.title}
+                    </div>
+                    <div className="opacity-0 px-2 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">
+                      {item.subtitle}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
 

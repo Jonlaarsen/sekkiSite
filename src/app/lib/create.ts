@@ -8,10 +8,11 @@ export const create = async (formData: FormData) => {
   const sql = neon(`${process.env.DATABASE_URL}`);
   const title = formData.get('title') as string;
   const subtitle = formData.get('subtitle') as string | null;
-  const description = formData.get('description') as string | null;
-  const imgURL = formData.get('imgURL') as string;
-  let videoURL = formData.get('videoURL') as string;
+  const imgURL = formData.get('imgurl') as string;
+  let videoURL = formData.get('videourl') as string;
   const category = formData.get('category') as string;
+
+  console.log('Form data received:', { title, subtitle, imgURL, videoURL, category });
 
   if (!title || !imgURL || !videoURL) {
     throw new Error('Title, imgURL, and videoURL are required.');
@@ -32,10 +33,12 @@ export const create = async (formData: FormData) => {
   }
 
   try {
+    console.log('Attempting to insert with values:', [title, subtitle, category, imgURL, videoURL]);
+    
     await sql(
-      `INSERT INTO uploads (title, subtitle, description, imgURL, videoURL, categories) 
-       VALUES ($1, $2, $3, $4, $5, $6)`,
-      [title, subtitle, description, imgURL, videoURL, category]
+      `INSERT INTO videos (title, subtitle, category, imgURL, videoURL) 
+       VALUES ($1, $2, $3, $4, $5)`,
+      [title, subtitle, category, imgURL, videoURL]
     );
     console.log('Data inserted successfully!');
 
@@ -44,11 +47,11 @@ export const create = async (formData: FormData) => {
     revalidatePath('/work');
     revalidatePath('/admin');
 
-    // Redirect to work page to show the new content
-    redirect('/work');
-
   } catch (error) {
-    console.error('Error inserting data:', error);
-    throw new Error('Database insertion failed.');
+    console.error('Database error details:', error);
+    throw new Error(`Database insertion failed: ${error.message}`);
   }
+
+  // Move redirect outside try-catch to avoid catching the redirect error
+  redirect('/work');
 };
