@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import VideoActions from "./VideoActions";
 
 const Work = ({ videos, heroVideos }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -84,6 +85,7 @@ const Work = ({ videos, heroVideos }) => {
                     <div className="opacity-0 px-2 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl  text-white font-nornmal">
                       {item.subtitle}
                     </div>
+                    <VideoActions video={item} />
                   </div>
                 </div>
               ))}
@@ -117,6 +119,7 @@ const Work = ({ videos, heroVideos }) => {
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl text-white font-normal">
                     {item.subtitle}
                   </div>
+                  <VideoActions video={item} />
                 </div>
               ))}
           </div>
@@ -147,6 +150,7 @@ const Work = ({ videos, heroVideos }) => {
                     <div className="opacity-0 px-2 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl text-white font-normal">
                       {item.subtitle}
                     </div>
+                    <VideoActions video={item} />
                   </div>
                 ))}
             </div>
@@ -177,6 +181,7 @@ const Work = ({ videos, heroVideos }) => {
                   <div className="opacity-0 px-2 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 flex justify-center items-center text-xl text-white font-normal">
                     {item.subtitle}
                   </div>
+                  <VideoActions video={item} />
                 </div>
               ))}
           </div>

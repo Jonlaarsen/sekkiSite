@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React, { useState } from 'react'
+import VideoActions from './VideoActions';
 // import { ThreeThree } from '../data/Data'
 
 
@@ -45,6 +46,7 @@ console.log(heroVideos)
                   
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-10 mx-10 flex justify-center items-center text-center text-4xl uppercase text-white font-semibold">{item.title}</div>
                   <div className="opacity-0 group-hover:opacity-100 duration-300 absolute inset-x-0 top-40 mx-10 flex justify-center items-center text-xl  text-white font-nornmal">{item.subtitle}</div>
+                  <VideoActions video={item} isHeroVideo={true} />
               </div>
             </div>
             ))}

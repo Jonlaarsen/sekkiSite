@@ -1,10 +1,10 @@
+'use server';
+
 import { neon } from '@neondatabase/serverless';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 
 export const create = async (formData: FormData) => {
-  'use server';
-
   const sql = neon(`${process.env.DATABASE_URL}`);
   const title = formData.get('title') as string;
   const subtitle = formData.get('subtitle') as string | null;

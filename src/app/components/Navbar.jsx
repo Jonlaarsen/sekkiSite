@@ -2,10 +2,12 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useState } from 'react'
+import { useAuth } from '../lib/auth'
 
 const Navbar = () => {
   const currentPath = usePathname()
   const [menuOpen, setMenuOpen] = useState(false)
+  const { isLoggedIn, isLoading } = useAuth()
 
   const links = [
     { name: 'Home', path: '/' },
@@ -27,12 +29,17 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <div className='hidden md:flex text-sm md:text-4xl gap-1 md:gap-3'>
+      <div className='hidden md:flex text-sm md:text-4xl gap-1 md:gap-3 items-center'>
         {links.map((link) => (
           <div key={link.name} className='opacity-75 hover:opacity-100'>
             <Link href={link.path} className={isActive(link.path) ? 'active' : ''}>{link.name}</Link>
           </div>
         ))}
+        {!isLoading && isLoggedIn && (
+          <div className='opacity-75 hover:opacity-100'>
+            <Link href="/admin" className={isActive('/admin') ? 'active' : ''}>Admin</Link>
+          </div>
+        )}
       </div>
 
       {/* Hamburger Menu Icon */}
@@ -60,6 +67,15 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          {!isLoading && isLoggedIn && (
+            <Link 
+              href="/admin"
+              onClick={() => setMenuOpen(false)}
+              className='text-white text-3xl my-4 hover:text-blue-400 transition'
+            >
+              Admin
+            </Link>
+          )}
         </div>
       )}
     </div>
