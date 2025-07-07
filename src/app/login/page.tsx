@@ -5,28 +5,38 @@ import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
   const [loginError, setLoginError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
+    setIsLoading(true);
+    setLoginError("");
 
     const formData = new FormData(event.target as HTMLFormElement);
     const username = formData.get("username") as string;
     const password = formData.get("password") as string;
 
-    if (
-      username === process.env.NEXT_PUBLIC_USERNAME &&
-      password === process.env.NEXT_PUBLIC_PASSWORD
-    ) {
-      document.cookie = "isLoggedin=true; path=/;"; // Set cookie
-      setLoginError("");
-      router.push("/admin");
-    } else {
-      console.log(
-        process.env.NEXT_PUBLIC_USERNAME,
-        process.env.NEXT_PUBLIC_PASSWORD
-      );
-      setLoginError("Invalid username or password");
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        router.push("/admin");
+      } else {
+        setLoginError(data.error || "Invalid username or password");
+      }
+    } catch (error) {
+      setLoginError("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -45,6 +55,7 @@ export default function LoginPage() {
             className="text-black text-xl pl-3 h-[2rem]"
             placeholder="Username"
             required
+            disabled={isLoading}
           />
         </div>
         <div className="flex flex-col">
@@ -56,14 +67,16 @@ export default function LoginPage() {
             className="text-black text-xl pl-3 h-[2rem]"
             placeholder="Password"
             required
+            disabled={isLoading}
           />
         </div>
         <button
           type="submit"
           className="mt-10 text-2xl border-2"
           style={{ padding: "0.5rem 1rem", cursor: "pointer" }}
+          disabled={isLoading}
         >
-          Login
+          {isLoading ? "Logging in..." : "Login"}
         </button>
         {loginError && <p className="text-red-500 mt-4">{loginError}</p>}
       </form>
