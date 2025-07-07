@@ -19,7 +19,22 @@ const Work = ({ videos, heroVideos }) => {
   ];
 
   const openModal = (media) => {
-    setCurrentMedia(media);
+    // Create a copy of the media object to avoid mutating the original
+    const processedMedia = { ...media };
+    
+    // Validate and transform the YouTube URL if applicable
+    const youtubeRegex = /^(https?:\/\/)?(www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/;
+    const isYouTubeLink = youtubeRegex.test(processedMedia.videourl);
+
+    if (isYouTubeLink) {
+      const match = processedMedia.videourl.match(youtubeRegex);
+      if (match) {
+        const videoId = match[3];
+        processedMedia.videourl = `https://www.youtube.com/embed/${videoId}`;
+      }
+    }
+
+    setCurrentMedia(processedMedia);
     setIsModalOpen(true);
     document.body.style.overflow = "hidden"; // Prevent background scroll
   };
@@ -137,7 +152,7 @@ const Work = ({ videos, heroVideos }) => {
                   <div
                     key={item.id}
                     className="relative group bg-black cursor-pointer"
-                    // onClick={() => openModal(item), setIsVertical(true)}
+                    onClick={() => openModal(item)}
                   >
                     <img
                       src={item.imgurl}
