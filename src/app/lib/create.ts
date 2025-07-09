@@ -3,12 +3,13 @@
 import { neon } from '@neondatabase/serverless';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+import { transformGoogleDriveImageUrl, transformGoogleDriveVideoUrl } from './utils';
 
 export const create = async (formData: FormData) => {
   const sql = neon(`${process.env.DATABASE_URL}`);
   const title = formData.get('title') as string;
   const subtitle = formData.get('subtitle') as string | null;
-  const imgURL = formData.get('imgurl') as string;
+  let imgURL = formData.get('imgurl') as string;
   let videoURL = formData.get('videourl') as string;
   const category = formData.get('category') as string;
 
@@ -17,6 +18,9 @@ export const create = async (formData: FormData) => {
   if (!title || !imgURL || !videoURL) {
     throw new Error('Title, imgURL, and videoURL are required.');
   }
+
+  // Transform Google Drive image URL to thumbnail format
+  imgURL = transformGoogleDriveImageUrl(imgURL);
 
   // Validate and transform the YouTube URL if applicable
   const youtubeRegex = /^(https?:\/\/)?(www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/;
@@ -31,6 +35,9 @@ export const create = async (formData: FormData) => {
       throw new Error('Invalid YouTube video link.');
     }
   }
+
+  // Transform Google Drive video URL to preview format
+  videoURL = transformGoogleDriveVideoUrl(videoURL);
 
   try {
     console.log('Attempting to insert with values:', [title, subtitle, category, imgURL, videoURL]);

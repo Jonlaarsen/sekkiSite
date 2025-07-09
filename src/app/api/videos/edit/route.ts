@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { neon } from '@neondatabase/serverless';
 import { revalidatePath } from 'next/cache';
+import { transformGoogleDriveImageUrl, transformGoogleDriveVideoUrl } from '../../../lib/utils';
 
 export async function PUT(request: NextRequest) {
   try {
@@ -11,6 +12,9 @@ export async function PUT(request: NextRequest) {
     }
 
     const sql = neon(`${process.env.DATABASE_URL}`);
+
+    // Transform Google Drive image URL to thumbnail format
+    let processedImgURL = transformGoogleDriveImageUrl(imgURL);
 
     // Validate and transform the YouTube URL if applicable
     const youtubeRegex = /^(https?:\/\/)?(www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})/;
@@ -27,11 +31,14 @@ export async function PUT(request: NextRequest) {
       }
     }
 
+    // Transform Google Drive video URL to preview format
+    processedVideoURL = transformGoogleDriveVideoUrl(processedVideoURL);
+
     if (isHeroVideo) {
       await sql(
         `UPDATE herovideos SET title = $1, subtitle = $2, imgURL = $3, videoURL = $4 
          WHERE id = $5`,
-        [title, subtitle, imgURL, processedVideoURL, videoId]
+        [title, subtitle, processedImgURL, processedVideoURL, videoId]
       );
     } else {
       if (!category) {
@@ -40,7 +47,7 @@ export async function PUT(request: NextRequest) {
       await sql(
         `UPDATE videos SET title = $1, subtitle = $2, category = $3, imgURL = $4, videoURL = $5 
          WHERE id = $6`,
-        [title, subtitle, category, imgURL, processedVideoURL, videoId]
+        [title, subtitle, category, processedImgURL, processedVideoURL, videoId]
       );
     }
 

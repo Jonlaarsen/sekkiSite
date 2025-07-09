@@ -8,8 +8,8 @@ const Work = ({ videos, heroVideos }) => {
   const [currentMedia, setCurrentMedia] = useState(null);
   const [isVertical, setIsVertical] = useState(false);
 
-  const sortedVideos = videos.sort((a, b) => a.id - b.id);
-  const sortedHero = heroVideos.sort((a, b) => a.id - b.id);
+  const sortedVideos = videos.sort((a, b) => b.id - a.id);
+  const sortedHero = heroVideos.sort((a, b) => b.id - a.id);
 
   const links = [
     { name: "Brand Films", path: "#main" },
@@ -17,6 +17,13 @@ const Work = ({ videos, heroVideos }) => {
     { name: "Docummentary", path: "#doc" },
     { name: "Music Videos", path: "#music" },
   ];
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const openModal = (media) => {
     // Create a copy of the media object to avoid mutating the original
@@ -31,6 +38,18 @@ const Work = ({ videos, heroVideos }) => {
       if (match) {
         const videoId = match[3];
         processedMedia.videourl = `https://www.youtube.com/embed/${videoId}`;
+      }
+    }
+
+    // Validate and transform Google Drive URL if applicable
+    const googleDriveRegex = /^(https?:\/\/)?(www\.)?drive\.google\.com\/file\/d\/([a-zA-Z0-9_-]+)/;
+    const isGoogleDriveLink = googleDriveRegex.test(processedMedia.videourl);
+
+    if (isGoogleDriveLink) {
+      const match = processedMedia.videourl.match(googleDriveRegex);
+      if (match) {
+        const fileId = match[3];
+        processedMedia.videourl = `https://drive.google.com/file/d/${fileId}/preview`;
       }
     }
 
@@ -66,11 +85,12 @@ const Work = ({ videos, heroVideos }) => {
         <div className="flex justify-evenly pt-[5rem] items-center">
           {links.map((link) => (
             <div key={link.name}>
-              <Link href={link.path}>
-                <h1 className="md:text-2xl text-[0.7rem] opacity-55 hover:opacity-100">
-                  {link.name}
-                </h1>
-              </Link>
+              <button 
+                onClick={() => scrollToSection(link.path.substring(1))}
+                className="md:text-2xl text-[0.7rem] opacity-55 hover:opacity-100 bg-transparent border-none cursor-pointer"
+              >
+                {link.name}
+              </button>
             </div>
           ))}
         </div>
